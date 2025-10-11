@@ -416,6 +416,66 @@ img {
   font-size: var(--smaller-font-size);
 }
 
+/* ===== PROJECTS ===== */
+.project__card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.10);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.3s;
+}
+.project__card:hover {
+  box-shadow: 0px 8px 32px rgba(14, 36, 49, 0.18);
+}
+.project__img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.project__title {
+  font-size: 1.2rem;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+.project__desc {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--second-color);
+}
+.project__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+.project__tech li {
+  background: #f0f4fa;
+  color: var(--second-color);
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  list-style: none;
+}
+.project__link {
+  color: #fff;
+  background: var(--first-color);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.project__link:hover {
+  background: var(--second-color);
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
@@ -533,4 +593,43 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal__content {
+  margin: auto;
+  display: block;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+.modal__caption {
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.modal__close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+}
+.modal__close:hover {
+  color: #f44336;
 }
