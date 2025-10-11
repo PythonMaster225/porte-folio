@@ -192,27 +192,80 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+                <h2 class="section-title">Projets</h2>
 
                 <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.png" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.png" alt="">
-                    </a>
+                    <!-- Projet 1 -->
+                    <div class="project__card">
+                        <img src="assets/img/work1.png" alt="Projet 1" class="project__img">
+                        <h3 class="project__title">Une liste de présence de classe(Crud)</h3>
+                        <p class="project__desc">
+                            Un CRUD créer dans le but de récenser les étudiants présents au cours avec possibilité de modification , suppression et consutation de la liste.
+                        </p>
+                        <ul class="project__tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>PHP</li>
+                        </ul>
+                        <a href="#" class="project__link" 
+                           data-img="assets/img/work1.png" 
+                           data-title="Une liste de présence de classe(Crud)" 
+                           onclick="return false;">Voir le projet</a>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="project__card">
+                        <img src="assets/img/work2.png" alt="Projet 2" class="project__img">
+                        <h3 class="project__title">Web_EDT</h3>
+                        <p class="project__desc">
+                            Application web de gestion d'emploi du temps permettant d'ajouter des professeurs , les modules à enseigner et l'impression de l'emploi du temps.
+                        </p>
+                        <ul class="project__tech">
+                            <li>Html</li>
+                            <li>CSS3</li>
+                            <li>MySQL</li>
+                            <li>PHP</li>
+                        </ul>
+                        <a href="#" class="project__link" 
+                           data-img="assets/img/work2.png" 
+                           data-title="Web_EDT" 
+                           onclick="return false;">Voir le projet</a>
+                    </div>
+                    <!-- Projet 3 -->
+                    <div class="project__card">
+                        <img src="assets/img/work5.png" alt="Projet 3" class="project__img">
+                        <h3 class="project__title">Chez Diallo</h3>
+                        <p class="project__desc">
+                            Site web vitrine permettant de voir les produits disponibles , les prix et passer commande.
+                        </p>
+                        <ul class="project__tech">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>HTML</li>
+                            <li>CSS3</li>
+                        </ul>
+                        <a href="#" class="project__link" 
+                           data-img="assets/img/work5.png" 
+                           data-title="Chez Diallo" 
+                           onclick="return false;">Voir le projet</a>
+                    </div>
+                    <!-- Projet 4 -->
+                    <div class="project__card">
+                        <img src="assets/img/work6.png" alt="Projet 4" class="project__img">
+                        <h3 class="project__title">AutoDrive</h3>
+                        <p class="project__desc">
+                            Application Web de location et d'achat de véhicule.Faire le trie en fonction de la marque , les prix et le kilometrage.
+                        </p>
+                        <ul class="project__tech">
+                            <li>Html</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                        </ul>
+                        <a href="#" class="project__link" 
+                           data-img="assets/img/work6.png" 
+                           data-title="AutoDrive" 
+                           onclick="return false;">Voir le projet</a>
+                    </div>
                 </div>
             </section>
 
@@ -256,6 +309,32 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
-    </body>
+
+        <!-- Ajoute ceci avant </body> -->
+        <div id="modal" class="modal">
+          <span class="modal__close" id="modalClose">&times;</span>
+          <img class="modal__content" id="modalImg" src="" alt="Aperçu projet">
+          <div class="modal__caption" id="modalCaption"></div>
+        </div>
+<script>
+document.querySelectorAll('.project__link').forEach(link => {
+  link.addEventListener('click', function() {
+    const imgSrc = this.getAttribute('data-img');
+    const title = this.getAttribute('data-title');
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('modalCaption').textContent = title;
+    document.getElementById('modal').style.display = "block";
+  });
+});
+document.getElementById('modalClose').onclick = function() {
+  document.getElementById('modal').style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == document.getElementById('modal')) {
+    document.getElementById('modal').style.display = "none";
+  }
+}
+</script>
+</body>
 </html>
 
