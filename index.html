@@ -197,74 +197,44 @@
                 <div class="work__container bd-grid">
                     <!-- Projet 1 -->
                     <div class="project__card">
-                        <img src="assets/img/work1.png" alt="Projet 1" class="project__img">
-                        <h3 class="project__title">Une liste de présence de classe(Crud)</h3>
+                        <img src="assets/img/auto.png" alt="Projet 1" class="project__img">
+                        <h3 class="project__title">vente-auto</h3>
                         <p class="project__desc">
-                            Un CRUD créer dans le but de récenser les étudiants présents au cours avec possibilité de modification , suppression et consutation de la liste.
+                            Site web d'achat et de location de véhicules  avec gestion des utilisateurs et des annonces.
                         </p>
                         <ul class="project__tech">
                             <li>HTML5</li>
                             <li>CSS3</li>
-                            <li>PHP</li>
+                            <li>JAVASCRIPT</li>
                         </ul>
-                        <a href="#" class="project__link" 
-                           data-img="assets/img/work1.png" 
-                           data-title="Une liste de présence de classe(Crud)" 
-                           onclick="return false;">Voir le projet</a>
+                        <a href="vente-auto.onrender.com" class="project__link">Voir le projet</a>
                     </div>
                     <!-- Projet 2 -->
                     <div class="project__card">
-                        <img src="assets/img/work2.png" alt="Projet 2" class="project__img">
-                        <h3 class="project__title">Web_EDT</h3>
+                        <img src="assets/img/Diallo.png" alt="Projet 2" class="project__img">
+                        <h3 class="project__title">Diallo store</h3>
                         <p class="project__desc">
-                            Application web de gestion d'emploi du temps permettant d'ajouter des professeurs , les modules à enseigner et l'impression de l'emploi du temps.
+                            Diallo store est un Site e-commerce de vente de produits électroniques avec panier d'achat et paiement en ligne.
                         </p>
                         <ul class="project__tech">
                             <li>Html</li>
                             <li>CSS3</li>
-                            <li>MySQL</li>
-                            <li>PHP</li>
+                            <li>JAVASCRIPT</li>
                         </ul>
-                        <a href="#" class="project__link" 
-                           data-img="assets/img/work2.png" 
-                           data-title="Web_EDT" 
-                           onclick="return false;">Voir le projet</a>
+                        <a href="https://diallo-store.onrender.com" class="project__link">Voir le projet</a>
                     </div>
                     <!-- Projet 3 -->
                     <div class="project__card">
-                        <img src="assets/img/work5.png" alt="Projet 3" class="project__img">
-                        <h3 class="project__title">Chez Diallo</h3>
+                        <img src="assets/img/neo.png" alt="Projet 4" class="project__img">
+                        <h3 class="project__title">Neo_Viszion</h3>
                         <p class="project__desc">
-                            Site web vitrine permettant de voir les produits disponibles , les prix et passer commande.
-                        </p>
-                        <ul class="project__tech">
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                            <li>HTML</li>
-                            <li>CSS3</li>
-                        </ul>
-                        <a href="#" class="project__link" 
-                           data-img="assets/img/work5.png" 
-                           data-title="Chez Diallo" 
-                           onclick="return false;">Voir le projet</a>
-                    </div>
-                    <!-- Projet 4 -->
-                    <div class="project__card">
-                        <img src="assets/img/work6.png" alt="Projet 4" class="project__img">
-                        <h3 class="project__title">AutoDrive</h3>
-                        <p class="project__desc">
-                            Application Web de location et d'achat de véhicule.Faire le trie en fonction de la marque , les prix et le kilometrage.
-                        </p>
+                            Site Web de l'entreprise digitale de branding web.
                         <ul class="project__tech">
                             <li>Html</li>
                             <li>CSS3</li>
                             <li>JavaScript</li>
-                            <li>PHP</li>
                         </ul>
-                        <a href="#" class="project__link" 
-                           data-img="assets/img/work6.png" 
-                           data-title="AutoDrive" 
-                           onclick="return false;">Voir le projet</a>
+                        <a href="https://neo-viszion.onrender.com" class="project__link">Voir le projet</a>
                     </div>
                 </div>
             </section>
@@ -316,25 +286,6 @@
           <img class="modal__content" id="modalImg" src="" alt="Aperçu projet">
           <div class="modal__caption" id="modalCaption"></div>
         </div>
-<script>
-document.querySelectorAll('.project__link').forEach(link => {
-  link.addEventListener('click', function() {
-    const imgSrc = this.getAttribute('data-img');
-    const title = this.getAttribute('data-title');
-    document.getElementById('modalImg').src = imgSrc;
-    document.getElementById('modalCaption').textContent = title;
-    document.getElementById('modal').style.display = "block";
-  });
-});
-document.getElementById('modalClose').onclick = function() {
-  document.getElementById('modal').style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == document.getElementById('modal')) {
-    document.getElementById('modal').style.display = "none";
-  }
-}
-</script>
+
 </body>
 </html>
-
